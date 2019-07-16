@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>add_student</title>
+
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/normalize.css">
+</head>
+<body>
+<h2>Add new students</h2>
+<form method="POST">{% csrf_token %}
+    {{form.as_p}}
+    <button type="Submit">Add</button>
+</form>
+       
+</body>
+</html>

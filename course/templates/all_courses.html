@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>add_student</title>
+
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+		<h2 class="d-flex justify-content-center">All Courses</h2>
+<button type="submit" class="b-center"><a href="http://127.0.0.1:8000/course/add/">Add course</a></button>		
+<table class="table table-bordered table-striped">
+	<tr>
+	<th>Name</th>
+	<th>Description</th>
+	<th>Duration</th>
+	<th>Start_Date</th>
+	<th>Details</th>
+	<th>Edit</th>	
+
+	</tr>
+
+	{% for course in courses %}
+	<tr>
+		<td>{{course.name}}</td>
+		<td>{{course.description}}</td>
+		<td>{{course.duration_in_months}}</td>
+		<td>{{course.start_date}}</td>
+		<td><a href="/course/view/{{course.pk}}/">View More</a></td>
+		<td><a href="/course/edit/{{course.pk}}/">Edit</a></td>
+	</tr>
+	{% endfor %}
+</table>
+</div>
+       
+</body>
+</html>

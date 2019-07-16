@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>add_student</title>
+
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+   	<h2 class="m1-5">Student Details</h2>
+   	
+<img src={{student.image.url}}>
+<p>{{student.first_name}}</p>
+<p>{{student.last_name}}</p>
+<p>{{student.registration_number}}</p>
+<p>{{student.date_of_birth}}</p>
+<p>{{student.email}}</p>
+<p>{{student.gender}}</p>
+<p>{{student.phone_number}}</p>
+<p>{{student.date_joined}}</p>
+<p>{{student.courses}}</p>
+
+<a href="/student/edit/{{student.pk}}">Edit Details</a>
+
+       
+</body>
+</html>
